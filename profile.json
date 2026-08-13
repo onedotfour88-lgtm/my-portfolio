@@ -1,0 +1,65 @@
+{
+  "name": {
+    "value": "홍길동",
+    "public": true
+  },
+  "age": {
+    "value": "24",
+    "public": true
+  },
+  "gender": {
+    "value": "남성",
+    "public": true
+  },
+  "email": {
+    "value": "example@email.com",
+    "public": true
+  },
+  "phone": {
+    "value": "010-1234-5678",
+    "public": true
+  },
+  "address": {
+    "value": "경기도 ○○시",
+    "public": true
+  },
+  "career": [
+    {
+      "company": "ABC 회사",
+      "position": "웹 개발자",
+      "period": "2025.03 ~ 2026.02",
+      "description": [
+        "쇼핑몰 웹 서비스 개발",
+        "관리자 페이지 제작",
+        "사용자 데이터 처리 시스템 개선"
+      ],
+      "public": true
+    }
+  ],
+  "strength": [
+    {
+      "text": "문제를 구조화해서 해결하는 것을 좋아합니다.",
+      "public": true
+    },
+    {
+      "text": "새로운 기술을 빠르게 배우는 편입니다.",
+      "public": true
+    }
+  ],
+  "taste": [
+    {
+      "text": "새로운 기술을 직접 만들어보는 것을 좋아합니다.",
+      "public": true
+    },
+    {
+      "text": "깔끔하고 직관적인 디자인을 좋아합니다.",
+      "public": true
+    }
+  ],
+  "determination": [
+    {
+      "text": "꾸준히 배우고 성장하는 개발자가 되겠습니다.",
+      "public": true
+    }
+  ]
+}
