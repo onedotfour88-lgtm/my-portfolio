@@ -10,8 +10,13 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>나의 포트폴리오</title>
+    <title>
+        
+            홍길동 - Portfolio
+        
+    </title>
 
+    <!-- Flask에서 사용하는 CSS -->
     <link
         rel="stylesheet"
         href="style.css"
@@ -22,379 +27,194 @@
 
 <body>
 
+<div class="portfolio-container">
 
-<div class="container">
+
+    <!-- ========================= -->
+    <!-- 이름 -->
+    <!-- ========================= -->
+
+    
+
+    <h1 class="profile-name">
+        홍길동
+    </h1>
+
+    
 
 
-    <div class="card profile-header">
+    <!-- ========================= -->
+    <!-- 나이 / 성별 -->
+    <!-- ========================= -->
 
-        <p class="profile-label">
-            PORTFOLIO
-        </p>
+    
 
-        <h1 id="profile-name">
-            이름
-        </h1>
+    <div class="basic-info">
 
-        <p
-            class="profile-basic"
-            id="profile-basic"
-        >
-            나이 · 성별
-        </p>
+        
+
+        <span>
+            200세
+        </span>
+
+        
+
+
+        
+
+        <span>
+            남
+        </span>
+
+        
 
     </div>
 
+    
 
 
-    <div class="card">
+    <hr>
 
-        <h2>
+
+    <!-- ========================= -->
+    <!-- CONTACT -->
+    <!-- ========================= -->
+
+    
+
+    <section>
+
+        <h2 class="section-title">
             CONTACT
         </h2>
 
 
-        <div
-            id="email-section"
-            class="contact-item"
-        >
-
-            <strong>
-                EMAIL
-            </strong>
-
-            <span id="profile-email">
-                비공개
-            </span>
-
-        </div>
+        
 
 
-        <div
-            id="phone-section"
-            class="contact-item"
-        >
+        
 
-            <strong>
+        <div class="contact-row">
+
+            <span class="contact-label">
                 PHONE
-            </strong>
+            </span>
 
-            <span id="profile-phone">
-                비공개
+            <span>
+                010 xxxx xxxx
             </span>
 
         </div>
 
+        
 
-        <div
-            id="address-section"
-            class="contact-item"
-        >
 
-            <strong>
+        
+
+        <div class="contact-row">
+
+            <span class="contact-label">
                 ADDRESS
-            </strong>
+            </span>
 
-            <span id="profile-address">
-                비공개
+            <span>
+                서면 
             </span>
 
         </div>
 
-    </div>
+        
+
+    </section>
+
+    
 
 
+    <!-- ========================= -->
+    <!-- 경력 -->
+    <!-- ========================= -->
 
-    <div class="card">
+    
 
-        <h2>
+    <section>
+
+        <h2 class="section-title">
             경력
         </h2>
 
-        <div id="profile-career">
-            등록된 경력이 없습니다.
+        <div class="content-text">
+            ㅁㅇㄴㅇㅁㄴㅇ
         </div>
 
-    </div>
+    </section>
+
+    
 
 
+    <!-- ========================= -->
+    <!-- 강점 -->
+    <!-- ========================= -->
 
-    <div class="card">
+    
 
-        <h2>
+    <section>
+
+        <h2 class="section-title">
             강점
         </h2>
 
-        <div id="profile-strength">
-            등록된 내용이 없습니다.
+        <div class="content-text">
+            ㅇㅇㅇㅇㅇ
         </div>
 
-    </div>
+    </section>
+
+    
 
 
+    <!-- ========================= -->
+    <!-- 취향 -->
+    <!-- ========================= -->
 
-    <div class="card">
+    
 
-        <h2>
+    <section>
+
+        <h2 class="section-title">
             취향
         </h2>
 
-        <div id="profile-taste">
-            등록된 내용이 없습니다.
+        <div class="content-text">
+            ㅇㅇㅇㅇㅇㅇ
         </div>
 
-    </div>
+    </section>
+
+    
 
 
+    <!-- ========================= -->
+    <!-- 각오 -->
+    <!-- ========================= -->
 
-    <div class="card">
+    
 
-        <h2>
+    <section>
+
+        <h2 class="section-title">
             각오
         </h2>
 
-        <div id="profile-determination">
-            등록된 내용이 없습니다.
+        <div class="content-text">
+            ㅇㅇㅇㅇㅇㅇ
         </div>
 
-    </div>
+    </section>
+
+    
 
 
 </div>
-
-
-<script>
-
-
-// =====================================================
-// 미리보기용 localStorage 데이터 불러오기
-// =====================================================
-
-const saved =
-    localStorage.getItem("myPortfolio");
-
-
-if (saved) {
-
-
-    try {
-
-
-        const profile =
-            JSON.parse(saved);
-
-
-        document.getElementById(
-            "profile-name"
-        ).textContent =
-
-            profile.name || "이름";
-
-
-        document.getElementById(
-            "profile-basic"
-        ).textContent =
-
-            `${profile.age || "-"}세 · ${profile.gender || "-"}`;
-
-
-
-        // 이메일
-
-        if (
-            profile.visibility &&
-            profile.visibility.email &&
-            profile.email
-        ) {
-
-            document.getElementById(
-                "profile-email"
-            ).textContent =
-
-                profile.email;
-
-        } else {
-
-            document.getElementById(
-                "profile-email"
-            ).textContent =
-
-                "비공개";
-
-        }
-
-
-
-        // 전화번호
-
-        if (
-            profile.visibility &&
-            profile.visibility.phone &&
-            profile.phone
-        ) {
-
-            document.getElementById(
-                "profile-phone"
-            ).textContent =
-
-                profile.phone;
-
-        } else {
-
-            document.getElementById(
-                "profile-phone"
-            ).textContent =
-
-                "비공개";
-
-        }
-
-
-
-        // 주소
-
-        if (
-            profile.visibility &&
-            profile.visibility.address &&
-            profile.address
-        ) {
-
-            document.getElementById(
-                "profile-address"
-            ).textContent =
-
-                profile.address;
-
-        } else {
-
-            document.getElementById(
-                "profile-address"
-            ).textContent =
-
-                "비공개";
-
-        }
-
-
-
-        // 경력
-
-        document.getElementById(
-            "profile-career"
-        ).innerHTML =
-
-            formatText(
-                profile.career
-            );
-
-
-
-        // 강점
-
-        document.getElementById(
-            "profile-strength"
-        ).innerHTML =
-
-            formatText(
-                profile.strength
-            );
-
-
-
-        // 취향
-
-        document.getElementById(
-            "profile-taste"
-        ).innerHTML =
-
-            formatText(
-                profile.taste
-            );
-
-
-
-        // 각오
-
-        document.getElementById(
-            "profile-determination"
-        ).innerHTML =
-
-            formatText(
-                profile.determination
-            );
-
-
-    } catch (error) {
-
-        console.error(
-            "프로필 데이터를 불러오지 못했습니다.",
-            error
-        );
-
-    }
-
-}
-
-
-
-// =====================================================
-// 줄바꿈 처리
-// =====================================================
-
-function formatText(value) {
-
-    if (!value) {
-
-        return "등록된 내용이 없습니다.";
-
-    }
-
-
-    return escapeHTML(value)
-        .replace(/\n/g, "<br>");
-
-}
-
-
-
-// =====================================================
-// HTML 보안 처리
-// =====================================================
-
-function escapeHTML(value) {
-
-    return String(value)
-
-        .replace(
-            /&/g,
-            "&amp;"
-        )
-
-        .replace(
-            /</g,
-            "&lt;"
-        )
-
-        .replace(
-            />/g,
-            "&gt;"
-        )
-
-        .replace(
-            /"/g,
-            "&quot;"
-        )
-
-        .replace(
-            /'/g,
-            "&#039;"
-        );
-
-}
-
-
-</script>
-
 
 </body>
 
