@@ -441,5 +441,104 @@ textarea {
         margin-bottom: 4px;
 
     }
+.portfolio-page {
+    width: 100%;
+}
 
+.portfolio-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.portfolio-hero,
+.portfolio-section {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.portfolio-hero {
+    padding: 50px 35px;
+}
+
+.hero-label,
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.basic-info {
+    margin-top: 12px;
+    color: #777;
+    font-size: 18px;
+}
+
+.basic-info span:not(:last-child)::after {
+    content: " · ";
+}
+
+.portfolio-section h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-size: 22px;
+}
+
+.contact-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-label {
+    width: 100px;
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.contact-value {
+    flex: 1;
+}
+
+.section-content {
+    white-space: normal;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .portfolio-hero,
+    .portfolio-section {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .contact-item {
+        display: block;
+    }
+
+    .contact-label {
+        display: block;
+        width: auto;
+        margin-bottom: 4px;
+    }
+}
 }
